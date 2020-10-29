@@ -101,8 +101,9 @@ export function StackedAreaChart(container) {
         svg.append('clipPath')
         .attr('id', 'clip')
         .append('rect')
-        .attr('width', width)
-        .attr('height', height);
+        .attr('width', width - margin.left - 10)
+        .attr('height', height)
+        .attr('transform', 'translate(' + 50 + ',0)');
     }
 
     function filterByDate(range) {
